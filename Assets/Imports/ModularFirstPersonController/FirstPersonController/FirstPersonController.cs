@@ -16,6 +16,9 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+    [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] private LayerMask ignoreMe;
+    public bool isInteracting = false;
     private Rigidbody rb;
 
     #region Camera Movement Variables
@@ -148,12 +151,14 @@ public class FirstPersonController : MonoBehaviour
             sprintCooldownReset = sprintCooldown;
         }
     }
-
+    
     void Start()
     {
         if(lockCursor)
         {
             Cursor.lockState = CursorLockMode.Locked;
+            
+            
         }
 
         if(crosshair)
@@ -202,6 +207,10 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.E) && isInteracting == false)
+        {
+            Interactable?.Interact(this);
+        }
         #region Camera
 
         // Control camera movement
@@ -226,6 +235,14 @@ public class FirstPersonController : MonoBehaviour
             playerCamera.transform.localEulerAngles = new Vector3(pitch, 0, 0);
         }
 
+        if (lockCursor)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
         #region Camera Zoom
 
         if (enableZoom)
@@ -441,6 +458,9 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
 
+    public DialogueUI DialogueUI => dialogueUI;
+    
+    public IInteractable Interactable { get; set; }
     // Sets isGrounded based on a raycast sent straigth down from the player object
     private void CheckGround()
     {
@@ -448,7 +468,7 @@ public class FirstPersonController : MonoBehaviour
         Vector3 direction = transform.TransformDirection(Vector3.down);
         float distance = .75f;
 
-        if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
+        if (Physics.Raycast(origin, direction, out RaycastHit hit, distance, ~ignoreMe))
         {
             Debug.DrawRay(origin, direction * distance, Color.red);
             isGrounded = true;
@@ -531,6 +551,8 @@ public class FirstPersonController : MonoBehaviour
 
 
 // Custom Editor
+/*
+ 
 #if UNITY_EDITOR
     [CustomEditor(typeof(FirstPersonController)), InitializeOnLoadAttribute]
     public class FirstPersonControllerEditor : Editor
@@ -560,6 +582,7 @@ public class FirstPersonController : MonoBehaviour
         GUILayout.Label("Camera Setup", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Bold, fontSize = 13 }, GUILayout.ExpandWidth(true));
         EditorGUILayout.Space();
 
+        
         fpc.playerCamera = (Camera)EditorGUILayout.ObjectField(new GUIContent("Camera", "Camera attached to the controller."), fpc.playerCamera, typeof(Camera), true);
         fpc.fov = EditorGUILayout.Slider(new GUIContent("Field of View", "The camera’s view angle. Changes the player camera directly."), fpc.fov, fpc.zoomFOV, 179f);
         fpc.cameraCanMove = EditorGUILayout.ToggleLeft(new GUIContent("Enable Camera Rotation", "Determines if the camera is allowed to move."), fpc.cameraCanMove);
@@ -740,3 +763,5 @@ public class FirstPersonController : MonoBehaviour
 }
 
 #endif
+
+*/
