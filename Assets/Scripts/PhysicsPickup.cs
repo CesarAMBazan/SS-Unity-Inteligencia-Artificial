@@ -11,6 +11,8 @@ public class PhysicsPickup : MonoBehaviour
 
     [SerializeField] private Transform PickupTarget;
 
+    [SerializeField] private GameObject textPickup;
+    
     [Space] [SerializeField] private float PickupRange;
 
     private FirstPersonController firstPersonController;
@@ -24,7 +26,13 @@ public class PhysicsPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && firstPersonController.isInteracting == false)
+        Ray cameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        if (Physics.Raycast(cameraRay, out RaycastHit hit, PickupRange, PickupMask) && firstPersonController.isInteracting == false)
+        {
+            textPickup.SetActive(true);
+        } else textPickup.SetActive(false);
+        
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (currentObject)
             {
@@ -32,14 +40,16 @@ public class PhysicsPickup : MonoBehaviour
                 Physics.IgnoreCollision(GameObject.Find("Player").GetComponent<Collider>(),
                     currentObject.GetComponent<Collider>(), false);
                 currentObject = null;
+                firstPersonController.isInteracting = false;
                 return;
             }
-            Ray cameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+            
             if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, PickupRange, PickupMask))
             {
                 currentObject = hitInfo.rigidbody;
                 currentObject.useGravity = false;
                 Physics.IgnoreCollision(GameObject.Find("Player").GetComponent<Collider>(), currentObject.GetComponent<Collider>(), true);
+                firstPersonController.isInteracting = true;
             }
         }
     }
