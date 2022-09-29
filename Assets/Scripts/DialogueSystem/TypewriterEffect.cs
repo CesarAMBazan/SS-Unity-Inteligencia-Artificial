@@ -8,12 +8,10 @@ public class TypewriterEffect : MonoBehaviour
 {
     [SerializeField] private float typewriterSpeed = 80f;
     public bool IsRunning { get; private set; }
-    private readonly Dictionary<HashSet<char>, float> punctuations = new()
+    private readonly List<Punctuation> punctuations = new()
     {
-        {new HashSet<char>(){'.', '!', '?'}, 0.6f},
-        {
-            new HashSet<char>() { ',', ';', ':' }, 0.3f
-        }
+        new Punctuation(new HashSet<char>() { '.', '!', '?' }, 0.6f),
+        new Punctuation(new HashSet<char>() { ',', ';', ':' }, 0.3f)
     };
 
     private Coroutine typingCoroutine;
@@ -64,16 +62,28 @@ public class TypewriterEffect : MonoBehaviour
 
     private bool IsPunctuation(char character, out float waitTime)
     {
-        foreach (KeyValuePair<HashSet<char>, float> punctuactionCategory in punctuations)
+        foreach (Punctuation punctuactionCategory in punctuations)
         {
-            if (punctuactionCategory.Key.Contains(character))
+            if (punctuactionCategory.Punctuations.Contains(character))
             {
-                waitTime = punctuactionCategory.Value;
+                waitTime = punctuactionCategory.WaitTime;
                 return true;
             }
         }
 
         waitTime = default;
         return false;
+    }
+
+    private readonly struct Punctuation
+    {
+        public readonly HashSet<char> Punctuations;
+        public readonly float WaitTime;
+
+        public Punctuation(HashSet<char> punctuations, float waitTime)
+        {
+            Punctuations = punctuations;
+            WaitTime = waitTime;
+        }
     }
 }
