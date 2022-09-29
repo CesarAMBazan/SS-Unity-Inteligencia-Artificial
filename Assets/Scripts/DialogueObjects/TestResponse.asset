@@ -10,13 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
-  m_Name: Test
+  m_Name: TestResponse
   m_EditorClassIdentifier: 
   dialogue:
-  - "Bienvenido!\nEsta, es una prueba.\n\xBFTe parece bien?"
-  - "\xBFTe gustar\xEDa aprender Inteligencia Artificial?"
+  - 'TEST 1.
+
+    TEST 2,
+
+    TEST 3?'
   responses:
-  - responseText: La verdad si
+  - responseText: Yes
     dialogueObject: {fileID: 11400000, guid: 09683d8695a7908458487ea540228205, type: 2}
-  - responseText: No realmente
+  - responseText: No
+    dialogueObject: {fileID: 11400000, guid: 540cbe8baec27364bb586943c4c9861d, type: 2}
+  - responseText: Helo
     dialogueObject: {fileID: 11400000, guid: 540cbe8baec27364bb586943c4c9861d, type: 2}

@@ -15,17 +15,24 @@ public class TypewriterEffect : MonoBehaviour
     };
 
     private Coroutine typingCoroutine;
+    private TMP_Text textLabel;
+    private string textToType;
+    
     public void Run(string textToType, TMP_Text textLabel)
     {
-        typingCoroutine = StartCoroutine(TypeText(textToType,textLabel));
+        
+        this.textToType = textToType;
+        this.textLabel = textLabel;
+        typingCoroutine = StartCoroutine(TypeText());
     }
 
     public void Stop()
     {
+        if (!IsRunning) return;
         StopCoroutine(typingCoroutine);
-        IsRunning = false;
+        OnTypingCompleted();
     }
-    private IEnumerator TypeText(string textToType, TMP_Text textLabel)
+    private IEnumerator TypeText()
     {
         IsRunning = true;
         textLabel.text = string.Empty;
@@ -57,8 +64,8 @@ public class TypewriterEffect : MonoBehaviour
             yield return null;
         }
 
-        IsRunning = false;
-   }
+        OnTypingCompleted();
+    }
 
     private bool IsPunctuation(char character, out float waitTime)
     {
@@ -85,5 +92,11 @@ public class TypewriterEffect : MonoBehaviour
             Punctuations = punctuations;
             WaitTime = waitTime;
         }
+    }
+
+    private void OnTypingCompleted()
+    {
+        IsRunning = false;
+        textLabel.maxVisibleCharacters = textToType.Length;
     }
 }

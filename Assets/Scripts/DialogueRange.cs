@@ -38,7 +38,7 @@ public class DialogueRange : MonoBehaviour
             else
             {
                 if(currentObject){
-                    currentObject.GetComponent<DialogueActivator>().stopInteracting();
+                    currentObject.GetComponent<DialogueActivator>().StopInteracting();
                 }
                 currentObject = null;
                 firstPersonController.Interactable = null;
