@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: QueEsEnigma
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "La m\xE1quina Enigma fue una m\xE1quina de rotores dise\xF1ada para cifrar y
+    descifrar mensajes."
+  - "La armada alemana la adopt\xF3 para uso militar y poco despu\xE9s su uso se
+    extendi\xF3 a las dem\xE1s fuerzas armadas alemanas. "
+  - Especialmente durante la segunda guerra mundial.
+  - "En el Reino Unido, matem\xE1ticos y cript\xF3grafos brit\xE1nicos, entre ellos
+    Alan Turing, trabajaron para encontrar la manera"
+  - "de poder descifrar los mensajes cifrados por la m\xE1quina Enigma, descifrando
+    con \xE9xito los c\xF3digos de la Luftwaffe en el verado de 1940."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

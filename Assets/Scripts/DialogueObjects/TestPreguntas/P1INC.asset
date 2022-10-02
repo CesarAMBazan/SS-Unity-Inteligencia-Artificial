@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
-  m_Name: Room1_2
+  m_Name: P1INC
   m_EditorClassIdentifier: 
   dialogue:
-  - Parece que te estas confundiendo un poco
-  - Necesitas aprender Inteligencia Artificial
-  - Decide bien :)
-  responses: []
+  - PREGUNTA INCORRECTA
+  responses:
+  - responseText: Lastima...
+    dialogueObject: {fileID: 11400000, guid: f540447fd6947e84ca93e8bc7863951f, type: 2}

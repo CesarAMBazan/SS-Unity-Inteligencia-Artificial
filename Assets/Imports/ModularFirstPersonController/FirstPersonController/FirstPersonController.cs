@@ -16,11 +16,15 @@ using System.Net;
 
 public class FirstPersonController : MonoBehaviour
 {
+    /*
+     * Preguntas y Respuestas
+     */
+    [SerializeField] private int respuestasNivel2;
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private LayerMask ignoreMe;
-    public bool isInteracting = false;
+    public bool isInteracting;
     private Rigidbody rb;
-
+    
     #region Camera Movement Variables
 
     public Camera playerCamera;
@@ -214,6 +218,7 @@ public class FirstPersonController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isInteracting == false)
         {
             Interactable?.Interact(this);
+            ExplanationInt?.Interact(this);
         }
 
         #region Camera
@@ -469,6 +474,7 @@ public class FirstPersonController : MonoBehaviour
     public DialogueUI DialogueUI => dialogueUI;
 
     public IInteractable Interactable { get; set; }
+    public IInteractable ExplanationInt { get; set; }
 
     // Sets isGrounded based on a raycast sent straigth down from the player object
     private void CheckGround()
@@ -563,7 +569,33 @@ public class FirstPersonController : MonoBehaviour
                 Mathf.Lerp(joint.localPosition.z, jointOriginalPos.z, Time.deltaTime * bobSpeed));
         }
     }
+
+    public int RespuestasNivel2 => respuestasNivel2;
+
+    public void RespuestaCorrecta(int lvl)
+    {
+        switch (lvl)
+        {
+            case 2:
+                respuestasNivel2++;
+                break;
+        }
+    }
+
+    public void ResetRespuesta(int lvl)
+    {
+        switch (lvl)
+        {
+            case 2:
+                respuestasNivel2 = 0;
+                break;
+        }
+    }
 }
+
+/*
+ * Metodos de preguntas y respuestas
+ */
 
 
 // Custom Editor

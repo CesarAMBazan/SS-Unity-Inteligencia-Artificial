@@ -27,6 +27,7 @@ public class DialogueRange : MonoBehaviour
         {
             talkBox.SetActive(true);
         }else talkBox.SetActive(false);
+        
         if (firstPersonController.isInteracting == false)
         {
             Ray cameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));

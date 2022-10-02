@@ -26,6 +26,11 @@ public class DialogueUI : MonoBehaviour
         IsOpen = true;
         dialogueBox.SetActive(true);
         lockPlayer();
+        firstPersonController.isInteracting = true;
+        if (dialogueObject.IsCorrectQuestion)
+        {
+            firstPersonController.RespuestaCorrecta(dialogueObject.QuestionLevel);
+        }
         StartCoroutine(StepThroughDialogue(dialogueObject));
     }
 
@@ -38,6 +43,7 @@ public class DialogueUI : MonoBehaviour
     {
         for (int i = 0; i < dialogueObject.Dialogue.Length; i++)
         {
+            
             string dialogue = dialogueObject.Dialogue[i];
 
             yield return RunTypingEffect(dialogue);

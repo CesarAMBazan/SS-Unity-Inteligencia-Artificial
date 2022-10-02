@@ -35,7 +35,8 @@ public class TypewriterEffect : MonoBehaviour
     private IEnumerator TypeText()
     {
         IsRunning = true;
-        textLabel.text = string.Empty;
+        textLabel.maxVisibleCharacters = 0;
+        textLabel.text = textToType;
         
         float t = 0;
         int charIndex = 0;
@@ -52,7 +53,7 @@ public class TypewriterEffect : MonoBehaviour
             {
                 bool isLast = i >= textToType.Length - 1;
                 
-                textLabel.text = textToType.Substring(0, i + 1);
+                textLabel.maxVisibleCharacters = i+1;
 
                 if (IsPunctuation(textToType[i], out float waitTime) && !isLast &&
                     !IsPunctuation(textToType[i + 1], out _))
@@ -64,6 +65,7 @@ public class TypewriterEffect : MonoBehaviour
             yield return null;
         }
 
+        textLabel.maxVisibleCharacters = textToType.Length;
         OnTypingCompleted();
     }
 

@@ -7,11 +7,8 @@ public class DialogueActivator : MonoBehaviour, IInteractable
 
     private Animator animator;
     private static readonly int IsTalking = Animator.StringToHash("IsTalking");
-
-    public void UpdateDialogueObject(DialogueObject dialogueObject)
-    {
-        this.dialogueObject = dialogueObject;
-    }
+    
+    
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -28,7 +25,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
                 break;
             }
         }
-
+        
         animator.SetBool(IsTalking, true);
         player.DialogueUI.ShowDialogue(dialogueObject);
         

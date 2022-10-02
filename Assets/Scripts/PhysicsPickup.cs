@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PhysicsPickup : MonoBehaviour
 {
@@ -27,12 +28,12 @@ public class PhysicsPickup : MonoBehaviour
     void Update()
     {
         Ray cameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-        if (Physics.Raycast(cameraRay, out RaycastHit hit, PickupRange, PickupMask) && firstPersonController.isInteracting == false)
+        if (Physics.Raycast(cameraRay, out RaycastHit hit, PickupRange, PickupMask) && firstPersonController.isInteracting == false && firstPersonController.Interactable == null)
         {
             textPickup.SetActive(true);
         } else textPickup.SetActive(false);
         
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && firstPersonController.Interactable == null)
         {
             if (currentObject)
             {
@@ -43,8 +44,8 @@ public class PhysicsPickup : MonoBehaviour
                 firstPersonController.isInteracting = false;
                 return;
             }
-            
-            if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, PickupRange, PickupMask))
+
+            if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, PickupRange, PickupMask) )
             {
                 currentObject = hitInfo.rigidbody;
                 currentObject.useGravity = false;
@@ -63,5 +64,9 @@ public class PhysicsPickup : MonoBehaviour
 
             currentObject.velocity = directionToPoint * (12f * distanceToPoint);
         }
-    }
+        else if (!currentObject && firstPersonController.isInteracting && firstPersonController.Interactable == null && firstPersonController.ExplanationInt == null)
+        {
+            firstPersonController.isInteracting = false;
+        }
+}
 }

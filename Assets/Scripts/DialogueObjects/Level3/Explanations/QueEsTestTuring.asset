@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: QueEsTestTuring
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "El test de Turing es un examen de la capacidad de una m\xE1quina para exhibir
+    un comportamiento inteligente similar al de un ser humano"
+  - "o indistinguible de \xE9ste. El test consiste en tener un evaluador X el cual
+    conversaba con un computador de manera textual"
+  - "En caso de que el evaluador X no pudiera distinguir entre si la entidad con
+    la que hablaba era humano o m\xE1quina"
+  - "La m\xE1quina habr\xEDa pasado la prueba, por lo que la m\xE1quina ser\xEDa
+    capaz de exhibir un comportamiento inteligente."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0
