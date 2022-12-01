@@ -2262,7 +2262,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4792402371762521591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2782,7 +2782,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90ba6530d9bfda47abb4610956b2f44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  respuestasNivel2: 0
   dialogueUI: {fileID: 4792402371854232242}
   ignoreMe:
     serializedVersion: 2

@@ -19,7 +19,9 @@ public class FirstPersonController : MonoBehaviour
     /*
      * Preguntas y Respuestas
      */
-    [SerializeField] private int respuestasNivel2;
+    [SerializeField] private int[] respuestas = new int[10];
+    // [SerializeField] private int respuestasNivel2;
+    // [SerializeField] private int respuestasNivel3;
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private LayerMask ignoreMe;
     public bool isInteracting;
@@ -570,26 +572,19 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    public int RespuestasNivel2 => respuestasNivel2;
+    // public int RespuestasNivel2 => respuestasNivel2;
+    // public int RespuestasNivel3 => respuestasNivel3;
+
+    public int RespuestasNivel(int lvl) => respuestas[lvl];
 
     public void RespuestaCorrecta(int lvl)
     {
-        switch (lvl)
-        {
-            case 2:
-                respuestasNivel2++;
-                break;
-        }
+        respuestas[lvl]++;
     }
 
     public void ResetRespuesta(int lvl)
     {
-        switch (lvl)
-        {
-            case 2:
-                respuestasNivel2 = 0;
-                break;
-        }
+        respuestas[lvl] = 0;
     }
 }
 

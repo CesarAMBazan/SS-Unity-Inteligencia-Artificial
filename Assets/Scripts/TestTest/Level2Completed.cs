@@ -10,7 +10,7 @@ public class Level2Completed : MonoBehaviour
     {
         if (other.CompareTag("Player") && other.TryGetComponent(out FirstPersonController player))
         {
-            int respuestas = other.GetComponent<FirstPersonController>().RespuestasNivel2;
+            int respuestas = other.GetComponent<FirstPersonController>().RespuestasNivel(2);
             if (respuestas >= 3)
             {
                 Door.Open(other.transform.position);

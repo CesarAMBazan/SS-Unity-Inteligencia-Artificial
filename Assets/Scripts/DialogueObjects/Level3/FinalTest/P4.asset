@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: P4
+  m_EditorClassIdentifier: 
+  dialogue:
+  - PREGUNTA4
+  responses:
+  - responseText: INCORRECTA
+    dialogueObject: {fileID: 11400000, guid: 1f447875041047f4b98cfa6128bfb0aa, type: 2}
+  - responseText: INCORRECTA
+    dialogueObject: {fileID: 11400000, guid: 1f447875041047f4b98cfa6128bfb0aa, type: 2}
+  - responseText: CORRECTA
+    dialogueObject: {fileID: 11400000, guid: 689b1711c9214b543be5fe74524c199b, type: 2}
+  isCorrectQuestion: 0
+  questionLevel: 0
