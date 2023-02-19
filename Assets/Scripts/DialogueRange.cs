@@ -31,7 +31,9 @@ public class DialogueRange : MonoBehaviour
         if (firstPersonController.isInteracting == false)
         {
             Ray cameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
-            if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, dialogueRange, dialogueMask))
+            
+            Debug.DrawRay(cameraRay.origin, cameraRay.direction * dialogueRange, Color.red);
+            if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, dialogueRange))
             {
                 currentObject = hitInfo.rigidbody;
                 firstPersonController.Interactable = currentObject.GetComponent<DialogueActivator>();
@@ -45,5 +47,16 @@ public class DialogueRange : MonoBehaviour
                 firstPersonController.Interactable = null;
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Ray cameraRay = PlayerCamera.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
+        Gizmos.color = Color.red;
+        if (Physics.Raycast(cameraRay, out RaycastHit hitInfo, dialogueRange))
+        {
+            Gizmos.DrawSphere(hitInfo.point, 0.1f);
+        }
+        
     }
 }

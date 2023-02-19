@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Pregunta7_Q
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "\xBFC\xF3mo se diferencia la inteligencia humana de la inteligencia computacional?"
+  responses:
+  - responseText: "La inteligencia humana es m\xE1s compleja y vers\xE1til que la
+      inteligencia computacional."
+    dialogueObject: {fileID: 11400000, guid: c23309ddd0d778749ad5cf5b120a1d00, type: 2}
+  - responseText: "La inteligencia computacional es m\xE1s precisa y r\xE1pida que
+      la inteligencia humana. "
+    dialogueObject: {fileID: 11400000, guid: c23309ddd0d778749ad5cf5b120a1d00, type: 2}
+  - responseText: "Ambas son diferentes en t\xE9rminos de su origen, procesamiento
+      y aplicaciones."
+    dialogueObject: {fileID: 11400000, guid: 46bed1816e60a7b42b1f0ddc04969b68, type: 2}
+  isCorrectQuestion: 0
+  questionLevel: 0

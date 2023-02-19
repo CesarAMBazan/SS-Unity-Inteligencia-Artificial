@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: QueEsIA
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "La inteligencia artificial se enfoca en desarrollar sistemas y tecnolog\xEDas
+    que imitan la inteligencia humana, como el aprendizaje autom\xE1tico El reconocimiento
+    de patrones y la toma de decisiones."
+  - La inteligencia artificial es una subdisciplina de la inteligencia computacional.
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

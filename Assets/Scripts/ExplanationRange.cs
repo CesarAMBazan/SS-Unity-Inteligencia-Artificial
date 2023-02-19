@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,6 +26,7 @@ public class ExplanationRange : MonoBehaviour
         if (explanationObject && firstPersonController.isInteracting == false)
         {
             talkBox.SetActive(true);
+
         }
         else talkBox.SetActive(false);
 

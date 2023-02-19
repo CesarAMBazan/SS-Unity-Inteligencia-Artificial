@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Pregunta4_Q
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "\xBFQu\xE9 es la Prueba de Turing?"
+  responses:
+  - responseText: Un test para medir la inteligencia humana.
+    dialogueObject: {fileID: 11400000, guid: 9452cc9c032ac1a41bb4f36ff7294e1f, type: 2}
+  - responseText: "Una forma de evaluar si una m\xE1quina puede simular un comportamiento
+      humano inteligente."
+    dialogueObject: {fileID: 11400000, guid: 668c5702d971ccc4f920e551c0aafb51, type: 2}
+  - responseText: "Una prueba de velocidad para m\xE1quinas de computaci\xF3n."
+    dialogueObject: {fileID: 11400000, guid: 9452cc9c032ac1a41bb4f36ff7294e1f, type: 2}
+  isCorrectQuestion: 0
+  questionLevel: 0

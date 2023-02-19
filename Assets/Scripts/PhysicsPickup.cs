@@ -64,9 +64,9 @@ public class PhysicsPickup : MonoBehaviour
 
             currentObject.velocity = directionToPoint * (12f * distanceToPoint);
         }
-        else if (!currentObject && firstPersonController.isInteracting && firstPersonController.Interactable == null && firstPersonController.ExplanationInt == null)
+        else if (!currentObject && firstPersonController.isInteracting && firstPersonController.GetInteractions)
         {
             firstPersonController.isInteracting = false;
         }
-}
+    }
 }

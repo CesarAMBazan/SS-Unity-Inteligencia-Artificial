@@ -34,7 +34,7 @@ public class FirstPersonController : MonoBehaviour
     public float fov = 60f;
     public bool invertCamera = false;
     public bool cameraCanMove = true;
-    public float mouseSensitivity = 2f;
+    public float mouseSensitivity = 1f;
     public float maxLookAngle = 50f;
 
     // Crosshair
@@ -219,8 +219,18 @@ public class FirstPersonController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.E) && isInteracting == false)
         {
-            Interactable?.Interact(this);
-            ExplanationInt?.Interact(this);
+            if (Interactable != null)
+            {
+                Interactable.Interact(this);
+                return;
+            }
+
+            if (ExplanationInt != null)
+            {
+                ExplanationInt.Interact(this);
+                return;
+            }
+            SelectionInt?.Interact(this);
         }
 
         #region Camera
@@ -477,6 +487,10 @@ public class FirstPersonController : MonoBehaviour
 
     public IInteractable Interactable { get; set; }
     public IInteractable ExplanationInt { get; set; }
+    
+    public IInteractable SelectionInt { get; set; }
+
+    public bool GetInteractions => Interactable == null && ExplanationInt == null && SelectionInt == null;
 
     // Sets isGrounded based on a raycast sent straigth down from the player object
     private void CheckGround()
@@ -579,12 +593,27 @@ public class FirstPersonController : MonoBehaviour
 
     public void RespuestaCorrecta(int lvl)
     {
+        Debug.Log("SE HIZO LLAMADA A RESPUESTA CORRECTA");
+        
         respuestas[lvl]++;
+        Debug.Log($"EL NUMERO DE RESPUESTAS ACTUAL DEL NIVEL {lvl} ES {respuestas[lvl]}");
     }
 
     public void ResetRespuesta(int lvl)
     {
+        
         respuestas[lvl] = 0;
+        Debug.Log($"SE HAN RESETEADO RESPUESTAS DEL NIVEL {lvl} EL ACTUAL ES {respuestas[lvl]}");
+    }
+
+    public void ConfigInvert()
+    {
+        invertCamera = !invertCamera;
+    }
+
+    public void MouseSensitivity(float number)
+    {
+        mouseSensitivity = number;
     }
 }
 

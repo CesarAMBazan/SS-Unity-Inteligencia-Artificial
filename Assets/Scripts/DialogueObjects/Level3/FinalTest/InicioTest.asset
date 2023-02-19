@@ -17,8 +17,8 @@ MonoBehaviour:
     \xBFTe gustaria realizarlo?"
   responses:
   - responseText: "\xA1Me encantaria!"
-    dialogueObject: {fileID: 11400000, guid: f3ce062c16cc20e4e8d92c80c7ca9b76, type: 2}
-  - responseText: Quiza otro momento...
+    dialogueObject: {fileID: 11400000, guid: 05db046344756394ea61f0251abc319b, type: 2}
+  - responseText: "Quiz\xE1 en otro momento..."
     dialogueObject: {fileID: 0}
   isCorrectQuestion: 0
   questionLevel: 0

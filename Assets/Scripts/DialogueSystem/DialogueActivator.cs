@@ -4,7 +4,7 @@ using UnityEngine;
 public class DialogueActivator : MonoBehaviour, IInteractable
 {
     [SerializeField] private DialogueObject dialogueObject;
-
+    [SerializeField] private Boolean shouldTalk = true;
     private Animator animator;
     private static readonly int IsTalking = Animator.StringToHash("IsTalking");
     
@@ -26,7 +26,7 @@ public class DialogueActivator : MonoBehaviour, IInteractable
             }
         }
         
-        animator.SetBool(IsTalking, true);
+        animator.SetBool(IsTalking, shouldTalk);
         player.DialogueUI.ShowDialogue(dialogueObject);
         
     }

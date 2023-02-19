@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Recepcionista
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "\xA1Bienvenido al museo de Inteligencia Artificial!."
+  - Sientete libre de pasear por las salas que tenemos disponibles para ti.
+  - Recuerda que puedes interactuar con objetos presionando la tecla 'E'.
+  - "Es importante que entiendas la informaci\xF3n que se te presenta para que puedas
+    pasar el \xE9xamen necesario para poder avanzar por el museo."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

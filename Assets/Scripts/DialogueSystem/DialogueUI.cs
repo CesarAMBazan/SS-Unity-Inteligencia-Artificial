@@ -27,8 +27,10 @@ public class DialogueUI : MonoBehaviour
         dialogueBox.SetActive(true);
         lockPlayer();
         firstPersonController.isInteracting = true;
+        Debug.Log("IS THIS OBJECT CORRECT QUESTION?: " + dialogueObject.IsCorrectQuestion);
         if (dialogueObject.IsCorrectQuestion)
         {
+            Debug.Log("THIS OBJECT CORRESPONDS TO LEVEL:" + dialogueObject.QuestionLevel);
             firstPersonController.RespuestaCorrecta(dialogueObject.QuestionLevel);
         }
         StartCoroutine(StepThroughDialogue(dialogueObject));

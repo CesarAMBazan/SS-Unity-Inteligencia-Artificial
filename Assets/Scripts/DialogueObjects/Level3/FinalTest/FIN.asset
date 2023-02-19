@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
   - Muchas gracias por realizar este examen, para poder pasar al siguiente nivel
-    debiste haber tenido por lo menos 3 respuestas correctas
+    debiste haber tenido por lo menos 4 respuestas correctas.
   responses: []
   isCorrectQuestion: 0
   questionLevel: 0

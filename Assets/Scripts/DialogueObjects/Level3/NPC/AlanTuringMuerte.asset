@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: AlanTuringMuerte
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Alan Turing es una figura clave en la historia de la inteligencia artificial
+    y la computaci\xF3n, sin embargo tuvo una muerte tragica..."
+  - "Turing era homosexual, orientaci\xF3n sexual que en aquel entonces era considerada
+    un delito en el Reino Unido. "
+  - A pesar de sus aportaciones que salvaron vidas durante la Segunda Guerra Mundial
+  - "Turing fue arrestado y condenado por \"Conducta indecente\" en 1952 y se le
+    oblig\xF3 a tomar hormonas para \"curarlo\" de su homosexualidad..."
+  - "Fue en 1954 que Turing se suicid\xF3 a los 41 a\xF1os, ingiriendo cianuro... "
+  - Hasta decadas despues seria reconocido como un pionero en el campo de la Inteligencia
+    artificial y un heroe nacional en el Reino Unido.
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

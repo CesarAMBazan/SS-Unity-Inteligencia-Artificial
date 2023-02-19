@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Pregunta6_Q
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "\xBFQu\xE9 es la inteligencia computacional?"
+  responses:
+  - responseText: Una estrategia para realizar calculos computacionales de manera
+      inteligente.
+    dialogueObject: {fileID: 11400000, guid: e5e2523a76b6fe64293e229d4ffec4dc, type: 2}
+  - responseText: Una herramienta utilizada para medir la inteligencia humana.
+    dialogueObject: {fileID: 11400000, guid: e5e2523a76b6fe64293e229d4ffec4dc, type: 2}
+  - responseText: La capacidad de las computadoras para realizar tareas que requieren
+      inteligencia humana.
+    dialogueObject: {fileID: 11400000, guid: ceb4a91da7f804a4aadc261f8d4ba4be, type: 2}
+  isCorrectQuestion: 0
+  questionLevel: 0

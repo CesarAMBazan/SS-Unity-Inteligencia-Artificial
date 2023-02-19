@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: InteligenciaChico
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Es dif\xEDcil definir la inteligencia... "
+  - Pues esta es multidimensional, es una idea compleja que involucra diversos aspectos
+    para que algo sea considerado "inteligente".
+  - "No s\xF3lo eso, el concepto ha evolucionado a lo largo del tiempo, la inteligencia
+    es subjetiva "
+  - "y puede ser influenciada por factores como la cultura, la educaci\xF3n y la
+    experiencia personal."
+  - "La inteligencia es un constructo abstracto que es dif\xEDcil de medir de manera
+    objetiva"
+  - existen examenes para medirla pero estos tienen limitaciones y pueden ser influenciados
+    por factores externos.
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

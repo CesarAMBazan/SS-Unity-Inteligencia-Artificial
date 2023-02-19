@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Pregunta3_C
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "\xA1Correcto!, lamentablemente fue arrestado y condenado debido a su homosexualidad
+    siendo obligado a tomar hormonas para \"curarlo\""
+  - "dos a\xF1os despues de su condena se suicidaria ingiriendo cianuro a la edad
+    de 41 a\xF1os..."
+  responses:
+  - responseText: ...
+    dialogueObject: {fileID: 11400000, guid: 58d00ebb87029ab478698a73b23d2cd5, type: 2}
+  isCorrectQuestion: 1
+  questionLevel: 3
