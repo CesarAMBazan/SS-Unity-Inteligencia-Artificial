@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: CancerPulmon
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "El sistema de diagn\xF3stico de c\xE1ncer de pulm\xF3n de Google es un sistema
+    que utiliza la tecnolog\xEDa de aprendizaje profundo para analizar"
+  - "im\xE1genes de tomograf\xEDas computarizadas de pacientes y detectar signos
+    de c\xE1ncer de pulm\xF3n."
+  - El sistema fue entrenado con un gran conjunto de datos de imagenes de tomografias
+    y luego se le presentaron
+  - "nuevas im\xE1genes para que las analizara. En un estudio publicado en la revista
+    Nature en 2019, este sistema demostr\xF3"
+  - "una precisi\xF3n del 94,4% en la detecci\xF3n de c\xE1ncer de pulm\xF3n, superando
+    a los radi\xF3logos humanos."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

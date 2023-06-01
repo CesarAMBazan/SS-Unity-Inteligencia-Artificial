@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: UsosMachineLearning1
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Asistentes virtuales: Los asistentes virtuales, como Siri o Alexa, utilizan
+    t\xE9cnicas de procesamiento del lenguaje natural y aprendizaje autom\xE1tico
+    para entender y responder a las consultas de los usuarios."
+  - "Reconocimiento de im\xE1genes: Los algoritmos de Machine Learning se utilizan
+    en aplicaciones de reconocimiento de im\xE1genes para identificar patrones en
+    im\xE1genes y clasificarlas en diferentes categor\xEDas."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0
