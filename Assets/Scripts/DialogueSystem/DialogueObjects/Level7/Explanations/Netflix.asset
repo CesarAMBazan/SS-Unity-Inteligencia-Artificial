@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Netflix
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Netflix utiliz\xE1 un algoritmo de recomendaci\xF3n que utiliza un efoque basado
+    en aprendizaje autom\xE1tico llamado \"filtrado corporativo\""
+  - Este algoritmo analiza los patrones de comportamiento de los usuarios para predecir
+    sus preferencias
+  - "y asi recomendar contenido relevante. A partir de esto el algoritmo sugiere
+    nuevas opciones que podr\xEDan interesal al usuario"
+  - "lo que ayuda a personalizar la experiencia de visualizaci\xF3n y mejorar las
+    tasas de satisfacci\xF3n del cliente"
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

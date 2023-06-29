@@ -1,5 +1,6 @@
 using UnityEngine;
 
+// Serialización para crear un objeto de dialogo desde el menú
 [CreateAssetMenu(menuName = "Dialogue/DialogueObject")] 
 public class DialogueObject : ScriptableObject
 {

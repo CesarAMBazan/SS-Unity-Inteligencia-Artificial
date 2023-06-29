@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Tesla
+  m_EditorClassIdentifier: 
+  dialogue:
+  - El sistema Autopilot de Tesla es un sistema avanzado de asistencia al conductor
+    que utiliza inteligencia artifical
+  - "y sensores para auitomatizar algunas tareas de conducci\xF3n, este sistema utiliza
+    c\xE1maras, radares y sensores"
+  - "ultras\xF3nicos para detectar y seguir los carriles, mantener una distancia
+    segura con otros vehiculos, cambiar de carril de manera aut\xF3matica "
+  - "y estacionar de forma automatica. Autopilot no convierte al veh\xEDculo completamente
+    aut\xF3nomo y a\xFAn requiere la atenci\xF3n y supervisi\xF3n del conductor"
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

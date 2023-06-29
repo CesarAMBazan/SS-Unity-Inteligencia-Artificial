@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: CleaningLady
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Mi hijo esta encantado con esta herramienta del chatGPT, la utiliz\xE1 para
+    hacer sus tareas y ensayos, no digo que este bien que lo deje todo a una maquina"
+  - "pero siento que entiende mejor los temas cuando se los explica una IA comparado
+    con buscar la informaci\xF3n por si mismo en internet..."
+  - Hay maestros que me comentan que esta herramienta es peligrosa porque hara a
+    mi hijo un inutir... Pero no estoy de acuerdo con sus opiniones para nada
+  - La inteligencia artificial como muchas tecnologias que vinieron antes, es una
+    herramienta, la cual se puede utilizar con seriedad para facilitar la vida
+  - "Ahora mi hijo aprende igual o mejor que antes, \xA1Y hasta le da m\xE1s tiempo
+    para si mismo!."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

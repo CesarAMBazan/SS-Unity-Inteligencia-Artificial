@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Zerol
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "\xA1Hola!, soy el creador de este juego, me llamo C\xE9sar, esta es una representaci\xF3n
+    de mi cuarto en la vida real"
+  - Es decir, el espacio de trabajo donde realice todo este juego, espero que te
+    haya gustado la experiencia, es mi primer videojuego y creo que quedo bastante
+    bien.
+  - "Estoy por graduarme, al momento de escribir esto ya me encuentro ejerciendo
+    la carrera en Ingenieria en Computaci\xF3n"
+  - Como consejo como proximo ex estudiante, te recomiendo que siempre tengas en
+    mente tu salud mental durante tu viaje por el conocimiento
+  - "Ya sea que seas un estudiante o solo alguien que le llamo la atenci\xF3n este
+    juego, no seas tan duro contigo mismo, nadie nacio sabiendo..."
+  - "Tampoco hagas lo que hagas solo para demostrar algo, recuerda que uno escala
+    una monta\xF1a no para que el mundo lo vea, sino para ver el mundo."
+  - "Hay gente que te ama y apoya, confia en ellos, y por supuesto confia en ti mismo,
+    recuerda que s\xF3lo tu te conoces mejor que nadie."
+  - "Y s\xF3lo tu sabes tu historia, todo lo que has pasado para llegar al punto
+    en donde estas, sientete orgulloso."
+  - Muchas gracias por jugar mi videojuego, espero que te vaya bien, hoy y siempre.
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

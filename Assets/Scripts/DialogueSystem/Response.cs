@@ -1,6 +1,6 @@
-
 using UnityEngine;
 
+// Objeto serializable de respuestas
 [System.Serializable]
 public class Response
 {

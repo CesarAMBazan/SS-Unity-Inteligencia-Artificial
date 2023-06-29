@@ -1,5 +1,3 @@
-
-using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -23,6 +21,10 @@ public class ResponseHandler : MonoBehaviour
     {
         this.responseEvents = responseEvents;
     }
+    /// <summary>
+    /// Método que muestra las respuestas del dialogo actual
+    /// </summary>
+    /// <param name="responses">Array con respuestas</param>
     public void ShowResponses(Response[] responses)
     {
         float responseBoxHeight = 0;
@@ -48,6 +50,11 @@ public class ResponseHandler : MonoBehaviour
 
     }
 
+    /// <summary>
+    /// Método que identifica la respuesta clickeada por el usuario
+    /// </summary>
+    /// <param name="response">Respuesta clickeada</param>
+    /// <param name="responseIndex">Indice de la respuesta</param>
     private void OnPickedResponse(Response response, int responseIndex)
     {
         responseBox.gameObject.SetActive(false);

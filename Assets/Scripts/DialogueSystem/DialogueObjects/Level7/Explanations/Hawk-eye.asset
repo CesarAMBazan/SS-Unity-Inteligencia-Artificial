@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Hawk-eye
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Hawk-eye es una tecnolog\xEDa utilizada en deportes como el tenis, cricket y
+    el f\xFAtbol para determinar la trayectoria y ubicaci\xF3n precisa de la pelota."
+  - "Utiliza c\xE1maras de alta velocidad ubicadas alrededor del campo de juego que
+    capturan imagenes en tiempo real."
+  - "Estas im\xE1genes se procesan mediante algoritmos avanzados para calcular la
+    trayectoria de la pelota y generar representaciones visuales"
+  - "como gr\xE1ficos o animaciones. Esta tecnolog\xEDa se utiliza ampliamente en
+    eventos deportivos de alto nivel."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

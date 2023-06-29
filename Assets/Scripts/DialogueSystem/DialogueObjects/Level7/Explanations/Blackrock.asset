@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d28e7f6276b55b428c0a060b9fdf346, type: 3}
+  m_Name: Blackrock
+  m_EditorClassIdentifier: 
+  dialogue:
+  - "Aladdin es una plataforma de gesti\xF3n de inversiones basada en tecnolog\xEDa
+    de inteligencia artificial y an\xE1lisis de datos."
+  - "Este sistema permite a los inversores gestionar carteras, realizar an\xE1lisis
+    de riesgo, tomar decisiones de inversi\xF3"
+  - 'y supervisar el rendimiento en tiempo real. El sistema utiliza algoritmos y
+    modelos avanzados para analizar grandes conjuntos de datos '
+  - "Y proporcionar informaci\xF3n valiosa sobre los mercados financieros."
+  responses: []
+  isCorrectQuestion: 0
+  questionLevel: 0

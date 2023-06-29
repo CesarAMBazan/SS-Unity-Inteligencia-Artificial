@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -6,6 +5,7 @@ using UnityEngine;
 
 public class TypewriterEffect : MonoBehaviour
 {
+    // Atributo serializable que es la velocidad de escritura
     [SerializeField] private float typewriterSpeed = 80f;
     public bool IsRunning { get; private set; }
     private readonly List<Punctuation> punctuations = new()
@@ -18,9 +18,13 @@ public class TypewriterEffect : MonoBehaviour
     private TMP_Text textLabel;
     private string textToType;
     
+    /// <summary>
+    /// Método que se llama para comenzar el efecto de maquina de escribir
+    /// </summary>
+    /// <param name="textToType">El texto a escribir</param>
+    /// <param name="textLabel">El objeto de la interfaz gráfica donde se escribira el texto</param>
     public void Run(string textToType, TMP_Text textLabel)
     {
-        
         this.textToType = textToType;
         this.textLabel = textLabel;
         typingCoroutine = StartCoroutine(TypeText());
@@ -32,6 +36,11 @@ public class TypewriterEffect : MonoBehaviour
         StopCoroutine(typingCoroutine);
         OnTypingCompleted();
     }
+    
+    /// <summary>
+    /// Rútina para escribir el texto como una máquina de escribir
+    /// </summary>
+    /// <returns></returns>
     private IEnumerator TypeText()
     {
         IsRunning = true;

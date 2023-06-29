@@ -20,8 +20,6 @@ public class FirstPersonController : MonoBehaviour
      * Preguntas y Respuestas
      */
     [SerializeField] private int[] respuestas = new int[10];
-    // [SerializeField] private int respuestasNivel2;
-    // [SerializeField] private int respuestasNivel3;
     [SerializeField] private DialogueUI dialogueUI;
     [SerializeField] private LayerMask ignoreMe;
     public bool isInteracting;
@@ -213,23 +211,30 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        // Si el juego esta pausado se ignora totalmente el movimiento del jugador
         if (PauseMenu.isPaused)
         {
             return;
         }
+        // Si el jugador no esta interactuando y presiona la tecla de interactuar
         if (Input.GetKeyDown(KeyCode.E) && isInteracting == false)
         {
+            // Sí existe un objeto agarrable
             if (Interactable != null)
             {
+                // Se prepara la interacción
                 Interactable.Interact(this);
                 return;
             }
 
+            // Sí existe un objeto de dialogo interactuable
             if (ExplanationInt != null)
             {
+                // Se prepara la interacción
                 ExplanationInt.Interact(this);
                 return;
             }
+            // Sí existe un objeto de selección interactuable se prepara la interacción
             SelectionInt?.Interact(this);
         }
 
@@ -483,13 +488,16 @@ public class FirstPersonController : MonoBehaviour
         #endregion
     }
 
+    // Se hace referencia a la interfa gráfica de dialogo
     public DialogueUI DialogueUI => dialogueUI;
 
+    // Objetos interactuables
     public IInteractable Interactable { get; set; }
     public IInteractable ExplanationInt { get; set; }
     
     public IInteractable SelectionInt { get; set; }
 
+    // Se devuelve si el jugador esta interactuando con algo
     public bool GetInteractions => Interactable == null && ExplanationInt == null && SelectionInt == null;
 
     // Sets isGrounded based on a raycast sent straigth down from the player object
@@ -586,40 +594,49 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    // public int RespuestasNivel2 => respuestasNivel2;
-    // public int RespuestasNivel3 => respuestasNivel3;
 
+    /// <summary>
+    /// Devuelve las resuestas del nivel dado
+    /// </summary>
+    /// <param name="lvl">Nivel del cual se quieren obtener respuestas</param>
+    /// <returns>El número de respuestas de ese nivel</returns>
     public int RespuestasNivel(int lvl) => respuestas[lvl];
 
+    /// <summary>
+    /// Método para aumentar el contador de respuestas correctas en un nivel
+    /// </summary>
+    /// <param name="lvl">Nivel del cual aumentar el número de respuestas correctas</param>
     public void RespuestaCorrecta(int lvl)
     {
-        Debug.Log("SE HIZO LLAMADA A RESPUESTA CORRECTA");
-        
         respuestas[lvl]++;
-        Debug.Log($"EL NUMERO DE RESPUESTAS ACTUAL DEL NIVEL {lvl} ES {respuestas[lvl]}");
     }
 
+    /// <summary>
+    /// Método para resetear el número de respuestas correctas en un nivel
+    /// </summary>
+    /// <param name="lvl">Nivel del cual se quiere resetear su número de respuestas correcas</param>
     public void ResetRespuesta(int lvl)
     {
-        
         respuestas[lvl] = 0;
-        Debug.Log($"SE HAN RESETEADO RESPUESTAS DEL NIVEL {lvl} EL ACTUAL ES {respuestas[lvl]}");
     }
 
+    /// <summary>
+    /// Método para activar el invertir la cámara del jugador
+    /// </summary>
     public void ConfigInvert()
     {
         invertCamera = !invertCamera;
     }
-
+    
+    /// <summary>
+    /// Método para modificar la sensibilidad del movimiento del mouse del jugador
+    /// </summary>
+    /// <param name="number">Valor nuevo de sensibilidad</param>
     public void MouseSensitivity(float number)
     {
         mouseSensitivity = number;
     }
 }
-
-/*
- * Metodos de preguntas y respuestas
- */
 
 
 // Custom Editor

@@ -9,6 +9,9 @@ public class DialogueResponseEvents : MonoBehaviour
     public DialogueObject DialogueObject => dialogueObject;
     public ResponseEvent[] Events => events;
 
+    /// <summary>
+    /// Método para validar eventos respuesta y ejecutarlos
+    /// </summary>
     public void OnValidate()
     {
         if (dialogueObject == null) return;

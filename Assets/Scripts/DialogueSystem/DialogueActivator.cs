@@ -8,13 +8,16 @@ public class DialogueActivator : MonoBehaviour, IInteractable
     private Animator animator;
     private static readonly int IsTalking = Animator.StringToHash("IsTalking");
     
-    
     private void Start()
     {
         animator = GetComponent<Animator>();
     }
     
     // ReSharper disable Unity.PerformanceAnalysis
+    /// <summary>
+    /// Método que viene de la interfaz IInteractable, implementa la interacción entre este dialogo y el jugador
+    /// </summary>
+    /// <param name="player">GameObject del jugador</param>
     public void Interact(FirstPersonController player)
     {
         foreach (DialogueResponseEvents responseEvents in GetComponents<DialogueResponseEvents>())
@@ -31,9 +34,11 @@ public class DialogueActivator : MonoBehaviour, IInteractable
         
     }
 
+    /// <summary>
+    /// Cuando se termine de interactuar, se apaga una bandera del animator
+    /// </summary>
     public void StopInteracting()
     {
-        
         animator.SetBool(IsTalking, false);
     }
 }
